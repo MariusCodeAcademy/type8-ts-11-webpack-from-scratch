@@ -6,8 +6,16 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
 
+  output: {
+    assetModuleFilename: 'images/[hash][ext][query]',
+  },
+
   module: {
     rules: [
+      {
+        test: /\.(jpe?g|png|svg|gif)$/i,
+        type: 'asset/resource',
+      },
       {
         test: /\.css$/,
         exclude: /node_modules/,
