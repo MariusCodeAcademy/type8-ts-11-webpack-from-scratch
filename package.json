@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack serve --mode=development",
     "watch": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack --mode=development",
+    "build:p": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
