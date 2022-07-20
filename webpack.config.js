@@ -1,10 +1,10 @@
-const { extension } = require('mime');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 // numatytisis konfiguracijos objektas
 module.exports = {
   mode: 'development',
-  devtool: 'source-map',
+  // devtool: 'source-map',
+  devtool: false,
 
   output: {
     assetModuleFilename: 'images/[hash][ext][query]',
@@ -17,7 +17,7 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         exclude: /node_modules/,
         // weback skaito masyva nuo galo
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
@@ -30,13 +30,20 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+        },
+      },
     ],
   },
 
   plugins: [new MiniCssExtractPlugin()],
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts'],
   },
 
   devServer: {
