@@ -14,3 +14,4 @@
 ```
 
 4. `npm run build`
+5. Babel `npm i -D babel-loader @babel/core @babel/preset-env`
