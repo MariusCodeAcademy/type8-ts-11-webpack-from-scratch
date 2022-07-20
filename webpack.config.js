@@ -1,3 +1,4 @@
+const { extension } = require('mime');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 // numatytisis konfiguracijos objektas
@@ -14,8 +15,8 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        // taikomes i failus su .js prievardziu
-        test: /\.js$/,
+        // taikomes i failus su .js ir .jsx prievardziu
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -25,6 +26,10 @@ module.exports = {
   },
 
   plugins: [new MiniCssExtractPlugin()],
+
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 
   devServer: {
     hot: true,

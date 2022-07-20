@@ -1,7 +1,8 @@
 import './style/reset.css';
 import './style/style.css';
 
-import React from 'react';
+// import React from 'react';
 import { render } from 'react-dom';
+import App from './components/App';
 
-render(<h2>Hello from react</h2>, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
