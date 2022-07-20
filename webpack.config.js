@@ -2,7 +2,7 @@ const path = require('path');
 // numatytisis konfiguracijos objektas
 module.exports = {
   mode: 'development',
-  devtool: false,
+  devtool: 'source-map',
 
   module: {
     rules: [

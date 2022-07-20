@@ -4,7 +4,7 @@
 
 0. `npm init -y`
 1. `npm git init`
-2. `npm i webpack webpack-cli -D`
+2. `npm i webpack webpack-cli webpack-dev-server -D`
 3. scripts
 
 ```
@@ -15,3 +15,7 @@
 
 4. `npm run build`
 5. Babel `npm i -D babel-loader @babel/core @babel/preset-env`
+
+### Css
+
+1. `npm i -D css-loader mini-css-extract-plugin`

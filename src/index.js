@@ -1,3 +1,5 @@
+import './style/style.css';
+
 console.log('online');
 const num = 150;
 
