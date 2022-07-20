@@ -19,3 +19,8 @@
 ### Css
 
 1. `npm i -D css-loader mini-css-extract-plugin`
+
+### React
+
+1. `npm i react react-dom`
+2. `npm i -D @babel/preset-react`

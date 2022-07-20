@@ -27,6 +27,7 @@ module.exports = {
   plugins: [new MiniCssExtractPlugin()],
 
   devServer: {
+    hot: true,
     static: {
       directory: path.join(__dirname, 'dist'),
     },
