@@ -4,6 +4,19 @@ module.exports = {
   mode: 'development',
   devtool: false,
 
+  module: {
+    rules: [
+      {
+        // taikomes i failus su .js prievardziu
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
+  },
+
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
